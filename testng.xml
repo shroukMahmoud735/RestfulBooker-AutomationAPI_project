@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/automation_learning/Booking-project">
+        <classes><class name="Happy_scenario.TestCases">
+            <methods><include name="DisplayAllBookingsId"/>
+                <include name="CreateNewBooking"/>
+                <include name="DisplayBookDetailsById"/>
+                <include name="login"/>
+                <include name="UpdateBooking"/>
+                <include name="PartialUpdateBooking"/>
+                <include name="DeleteBooking"/>
+                <include name="DisplayBookingAfterDeleting"/>
+            </methods>
+        </class>
+            <class name="Negative_Scenario.Negative_TestCases">
+                <methods>
+                    <include name="CreateNewBookingWithInvalidPrice"/>
+                    <include name="UpdateBookingWithoutToken"/>
+                    <include name="DeleteBookingWithoutToke"/>
+                    <include name="Create_NewBooking_With_EmptyFirstName"/>
+                    <include name="Create_NewBooking_With_EmptyLastname"/>
+                    <include name="Create_NewBooking_With_EmptyCheckin"/>
+                    <include name="Create_NewBooking_With_EmptyCheckOut"/>
+                    <include name="Create_NewBooking_With_PreviousCheckIn_Date"/>
+                    <include name="Create_NewBooking_With_PreviousCheckout_Date"/>
+                    <include name="Create_NewBooking_With_CheckoutDate_Smaller_CheckIn"/>
+                    <include name="Create_NewBooking_With_FirstName_ContainsNumbers"/>
+                    <include name="Create_NewBooking_With_LastName_ContainsNumbers"/>
+
+                </methods></class></classes></test></suite>
