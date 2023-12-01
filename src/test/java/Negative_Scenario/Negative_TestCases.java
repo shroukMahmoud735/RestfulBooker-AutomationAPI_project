@@ -29,7 +29,7 @@ public class Negative_TestCases {
       //res.then().extract();
       // .log().all()
       // 400 is a bad request
-      res.then().time(lessThan(10000L));
+      res.then().time(lessThan(3000L));
       Assert.assertEquals(res.statusCode(),400);
 
 
@@ -85,7 +85,7 @@ public class Negative_TestCases {
                 //.log().all()
                 //403 is Forbidden
                 .assertThat().statusCode(403)
-                .assertThat().time(lessThan(10000L));
+                .assertThat().time(lessThan(3000L));
 
     }
     @Test
@@ -122,7 +122,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
     }
@@ -146,7 +146,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
     }
@@ -170,7 +170,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
     }
@@ -194,7 +194,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
     }
@@ -218,7 +218,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
     }
@@ -243,7 +243,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
     }
@@ -268,7 +268,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
     }
@@ -293,7 +293,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
     }
@@ -318,7 +318,7 @@ public class Negative_TestCases {
         //res.then().extract();
         // .log().all()
         // 400 is a bad request
-       res.then().time(lessThan(10000L));
+       res.then().time(lessThan(3000L));
         Assert.assertEquals(res.statusCode(),400);
 
 

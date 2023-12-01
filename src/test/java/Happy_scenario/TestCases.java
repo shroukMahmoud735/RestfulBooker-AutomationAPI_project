@@ -1,13 +1,12 @@
 package Happy_scenario;
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.testng.Assert;
+//import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+//import org.testng.asserts.SoftAssert;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
+
 import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.*;
 
@@ -24,7 +23,7 @@ public class TestCases {
                 .assertThat().statusCode(200)
                 .assertThat().time(lessThan(10000L));
 
-        ;
+
     }
 
 Integer Booking_id;
@@ -48,7 +47,7 @@ Integer Booking_id;
         //res.then().extract();
         // .log().all()
         assertEquals(res.statusCode(),200);
-        res.then().time(lessThan(10000L));
+        res.then().time(lessThan(3000L));
 
         Booking_id = res.path("bookingid");
        System.out.println("The Booking ID is:"+Booking_id);
@@ -87,7 +86,7 @@ Integer Booking_id;
                 .when().post("/auth");
                 response.then().extract().response();
                 assertEquals(response.statusCode(),200);
-        response.then().time(lessThan(10000L));
+        response.then().time(lessThan(3000L));
                token = response.path("token");
                // .log().body()
                // .assertThat().statusCode(200);
@@ -122,7 +121,7 @@ Integer Booking_id;
                 .put("/booking/"+Booking_id)
                 .then().log().all()
                 .assertThat().statusCode(200)
-                .assertThat().time(lessThan(10000L))
+                .assertThat().time(lessThan(3000L))
                 .assertThat().body("firstname",equalTo("Updated Firstname"))
                 .assertThat().body("lastname",equalTo("Updated lastname"))
                 .assertThat().body("totalprice",equalTo(222))
@@ -153,7 +152,7 @@ Integer Booking_id;
                 .patch("/booking/"+Booking_id)
                 .then().log().all()
                 .assertThat().statusCode(200)
-                .assertThat().time(lessThan(10000L))
+                .assertThat().time(lessThan(3000L))
                 .assertThat().body("firstname",equalTo("Partial_Updated_Firstname"))
                 .assertThat().body("lastname",equalTo("Updated lastname"))
                 .assertThat().body("totalprice",equalTo(756))
@@ -173,7 +172,7 @@ Integer Booking_id;
                 .when().delete("/booking/"+Booking_id)
                 .then()
                 .assertThat().statusCode(201)
-                .assertThat().time(lessThan(10000L));
+                .assertThat().time(lessThan(3000L));
 
     }
    @Test (priority = 5)
@@ -183,7 +182,7 @@ Integer Booking_id;
                 .then()
                 .log().all()
                 .assertThat().statusCode(404)
-                .assertThat().time(lessThan(10000L));
+                .assertThat().time(lessThan(3000L));
 
 
     }
